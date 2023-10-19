@@ -1,0 +1,38 @@
+# lexic.txt
+
+Alphabet:
+
+1. Upper(A-Z) and lower (a-z) case letters part of the English alphabet
+2. decimal digits (0-9)
+3. underline character ‘_’
+
+Symbols:
+
+1. operators: 
+    1. relational: `< > <= >=  == <>(different)`    
+    2. arithmetic: `+ - * / %`
+    3. assignment: `=` 
+    4. logical: `&& || !!`
+2. separators: `[ ] { } ( ) space  ; , /n`
+3. reserved words: `BEGIN, END, if, else, while, for,integer, string, char,read,write`     
+
+Identifiers: a sequence of letters and digits, such that the first character is a letter; the rule is:
+
+1. letter ::= "A" | "B" | .. | "Z" | "a" | "b" | .. | "z”
+2. digit ::= “0”|"1" |”2”|...| "9”
+
+identifier::= `(letter|"_"){letter|digit|"_"}`
+
+Constants: 
+
+1.integer - rule:
+Integer ::= "0" | ["-" | "+"] Non-zero-digit {Digit}
+Non-zero-digit ::= "1" | .. | "9"
+Digit ::= "0" | Non-zero-digit
+
+2.character
+character ::= 'letter' | 'digit' | ' ' | '_'
+
+3.string
+string ::= "charlist"
+charlist ::= character | character{character}
