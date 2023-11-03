@@ -4,28 +4,26 @@
 
 program ::= "BEGIN" compound_statement “END”
 
-compound_statement ::= "{" statement_list "}"
+compound_statement ::=  statement_list
 
 statement_list ::= statement | statement ";" statement_list
 statement ::= (declaration | assignment_statement | if_statement | while_statement  | for_statement | iostmt)
 
-declaration ::= simple_type " " IDENTIFIER ; | array_declaration
+declaration ::= simple_type " " IDENTIFIER ;
 
 simple_type ::= "int" | "string" | "char"
-
-array_declaration ::= "array" " " simple_type " " IDENTIFIER "[" "]" ;
 
 `expression ::= expression + term | expression - term | term
 term ::= term * factor | term / factor | factor
 factor ::= "(" expression ")" | IDENTIFIER | CONST`
 
-iostmt ::= "read" "(" IDENTIFIER ")" | "write" "(" IDENFITIER ")" | "write "(" CONST ")"
+iostmt ::= "read"  IDENTIFIER  | "write"  IDENFITIER  | "write  CONST 
 
 assignment_statement ::= IDENTIFIER "=" expression
-if_statement ::= "if" "(" condition ")" compound_statement | "if" "(" condition ")"compound_statement "else" compound_stawtement
-while_statement ::= "while "(" condition ")" compound_statement
-for_statement ::= "for" for_header compound_statement
-for_header ::= "(" "int" assignment_statement ";" condition ";" assignment_statement ")"
+if_statement ::= "if" condition {  compound_statement } | "if" condition {compound_statement} "else" {compound_stawtement}
+while_statement ::= "while  condition  {compound_statement}
+for_statement ::= "for" for_header { compound_statement }
+for_header ::=  "int" assignment_statement "," condition "," assignment_statement 
 
 condition ::= expression relation expression
 relation ::= "<" | "<=" | "==" | "!=" | ">=" | ">"
