@@ -1,0 +1,29 @@
+BEGIN
+
+    integer x;
+    integer divisor;
+    bool isPrime;
+
+    read x;
+    isPrime =1;
+
+    if x < 2 {
+        isPrime=0;
+     }
+
+    for divisor=2, a, 1{
+        if a % divisor == 0 {
+            isPrime=0;
+            divisor = a+1;
+        }
+    }
+
+    if isPrime == 0{
+        write "number is not prime";
+    }
+
+    if isPrime == 1{
+        write "number is prime";
+    }
+
+END

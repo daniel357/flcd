@@ -1,0 +1,23 @@
+BEGIN
+
+    integer x;
+    integer y;
+    integer z;
+    integer minim;
+
+    read x;
+    read y;
+    read z;
+
+    3minim == x;
+
+    if y <minim {
+        minim = y;
+    }
+    if z <minim {
+        minim =z;
+    }
+
+    write minim;
+
+END

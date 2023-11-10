@@ -1,0 +1,2 @@
+"ana_   asd33 > < ><>_ fff 00    9 0 9 99"
+file = open('p2.txt', 'r')
