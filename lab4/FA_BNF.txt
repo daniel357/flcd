@@ -1,0 +1,18 @@
+<newline> ::= `\n`
+<FA> ::= <set_of_states><newline><alphabet><newline><initial_state><newline><final_states><newline><transitions>
+
+<state> ::= `A`|`B`|...|`Z`|`a`|`b`|...|`z`
+<states> ::= <state>|<state> ` ` <states>
+<set_of_states> ::= `states = `<states>
+
+<alphanumeric> ::= `A`|`B`|...|`Z`|`a`|`b`|...|`z`|`0`|`1`|...|`9`
+<set_of_alphabet> ::= <alphanumeric>|<alphanumeric><set_of_alphabet>
+<alphabet> ::= `alphabet = ` <alphabet_set>
+
+<initial_state> ::= `initialState = ` <state>
+
+<final_states> ::= `finalStates = ` <states>
+
+<transition> ::= `(` <state> `,` <alphanumeric> `=>` <state> `)`
+<set_of_transitions> ::= <transition><newline>|<transition><newline><set_of_transitions>
+<transitions> ::= `transitions=` <newline> <set_of_transitions>

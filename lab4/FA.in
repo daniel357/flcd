@@ -1,0 +1,8 @@
+states = A B C
+alphabet = a b c
+initialState = A
+finalStates = C
+transitions =
+(A,[a,b,c,de...zABC..Z])=>B
+(B,b)=>C
+(C,c)=>C
