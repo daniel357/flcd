@@ -1,0 +1,17 @@
+BEGIN
+    integer size;
+    integer number;
+    integer sum;
+    integer i;
+
+    sum = 0;
+
+    read size;
+
+    for i=0,size,1 {
+        read number;
+        sum = sum + number;
+    }
+
+    write sum;
+END
