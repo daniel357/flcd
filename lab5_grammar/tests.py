@@ -8,7 +8,7 @@ class Tests(unittest.TestCase):
     def setUp(self):
         grammar = ContextFreeGrammar()
         grammar.load_grammar('g1.txt')
-        self.parser = Parser(grammar)  # Replace Parser with your actual class name
+        self.parser = Parser(grammar) 
 
     def test_momentaryInsucces(self):
         self.parser.momentaryInsuccess()
